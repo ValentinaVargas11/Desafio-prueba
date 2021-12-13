@@ -95,9 +95,17 @@
     color: white;
     font-size: 16px;
     padding: 10px 30px;
+    transition: all 2s;
+    
 }
 .portada__conteiner--text:hover {
-    background-color: rgb(235, 65, 65);
+        width: 200px;
+        height: 70px;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-image: linear-gradient(to top, red , yellow);    
 }
 
 #pagos {
@@ -106,7 +114,7 @@
     justify-content: center;
 }
 .metodos{
-    background-color: black;
+    background-image: linear-gradient(black, red);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,6 +250,8 @@
     background-color: red;
     color: white;
     font-size: 16px;
+    display: flex;
+    justify-content: center;
 }
 .boton__text:hover{
     background-color: rgb(235, 65, 65);
@@ -999,5 +1009,16 @@
             width: 300px;
             height: 100px;
     }
+}
 
-}   
+@keyframes mi-efecto {
+    0% {
+        width: 300px;
+    }
+    100% {
+        width: 400px;
+    }
+}
+.boton__text{
+    animation: mi-efecto 3s linear 0s infinite;
+}
