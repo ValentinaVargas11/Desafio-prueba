@@ -330,8 +330,8 @@
 
 /* contacto */
 .conteiner {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     margin: 20px 216px 40px 216px;
 }
 .conteiner__contactos{
@@ -366,7 +366,7 @@
     font-size: 14px;
 }
 .conteiner__form--contenido-3{
-    padding: 10px 30px;
+    padding: 10px 0px;
 }
 .conteiner__form--contenido-4{
     padding: 10px 30px;
@@ -1021,4 +1021,14 @@
 }
 .boton__text{
     animation: mi-efecto 3s linear 0s infinite;
+}
+
+/* bootstrap */
+
+.offcanvas-title{
+    color: white;
+}
+
+*{
+    text-decoration: none !important;
 }
