@@ -42,8 +42,8 @@
         </nav> -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                    <a href="./index.html"><img src="../img/Logo.png" class= header__conteiner--img alt="Logo" ></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a href="../index.html"><img src="../img/Logo.png" class= header__conteiner--img alt="Logo" ></a>
+            <button class="navbar-toggler" id="menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -74,29 +74,40 @@
                 </ul>
                 <form class="d-flex">
                 <input class="form-control me-2" type="search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                <button class="btn btn-outline-success" id="buscar" type="submit">Buscar</button>
                 </form>
             </div>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
+        <div class="marco">
         <div class="referencia">
-            <div class="Teclados">
-                    <h1>Teclados</h1>
+            <div>
+                    <h1 class="title__destacados">Teclados</h1>
             </div>
             <div class="img">
                     <img src="../img/pexels-maik-poblocki-3812048.jpg" alt="teclado">
             </div>
         </div>
         <div class="categorias">
-                <div class="ordenar">
+                <!-- <div class="ordenar">
                     <select name="Elegir" id="Elegir">
                         <option value="1">Más vendido</option>
                         <option value="2">Menor precio</option>
                         <option value="3">Mayor precio</option>
                     </select>
+                </div> -->
+                <div class="dropdown pb -2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ordenar por
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Más relevantes</a></li>
+                        <li><a class="dropdown-item" href="#">Menor precio</a></li>
+                        <li><a class="dropdown-item" href="#">Mayor precio</a></li>
+                    </ul>
                 </div>
             <div class="conteiner__productos">
                 <div>
@@ -205,7 +216,7 @@
 
 
 
-
+    </div>
     </main>
 
 

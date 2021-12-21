@@ -41,8 +41,8 @@
         </nav> -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                    <a href="./index.html"><img src="../img/Logo.png" class= header__conteiner--img alt="Logo" ></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a href="../index.html"><img src="../img/Logo.png" class= header__conteiner--img alt="Logo" ></a>
+            <button class="navbar-toggler" id="menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -73,16 +73,18 @@
                 </ul>
                 <form class="d-flex">
                 <input class="form-control me-2" type="search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                <button class="btn btn-outline-success" id="buscar" type="submit">Buscar</button>
                 </form>
             </div>
             </div>
         </nav>
     </header>
     <main>
+        <div id="main">
+            <div class="marco">
         <div class="conteiner__carrito">
-            <div class="title__carrito">
-                <h1>Carrito</h1>
+            <div>
+                <h1 class="title__destacados">Carrito</h1>
             </div>
             <div class="carrito">
                 <div class="carrito__producto">
@@ -129,6 +131,8 @@
                     <a href="#"><input type="submit" value="Comprar" id="comprar"></a>    
                 </div>
         </div>
+        </div>
+    </div>
     </main>
 
     <footer id="footer">

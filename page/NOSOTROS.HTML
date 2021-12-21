@@ -42,8 +42,8 @@
         </nav> -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                    <a href="./index.html"><img src="../img/Logo.png" class= header__conteiner--img alt="Logo" ></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a href="../index.html"><img src="../img/Logo.png" class= header__conteiner--img alt="Logo" ></a>
+            <button class="navbar-toggler" id="menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -74,41 +74,45 @@
                 </ul>
                 <form class="d-flex">
                 <input class="form-control me-2" type="search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                <button class="btn btn-outline-success" id="buscar" type="submit">Buscar</button>
                 </form>
             </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="container__nosotros">
-            <div class="Teclados">
-                <h1>Nosotros</h1>
+        <div id="main">
+            <div class="marco">
+            <div class="container__nosotros">
+                <div>
+                    <h1 class="title__destacados">Nosotros</h1>
+                </div>
+                <div class="Nosotros">
+                    <img src="../img/b53c0044-9a7a-4740-967b-053e797e29b6.jfif" alt="local">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam molestiae delectus excepturi, possimus reiciendis cum quod veritatis quibusdam obcaecati iure dolor inventore exercitationem fugiat repellat illo reprehenderit fuga iste voluptates.</p>
+                </div>
             </div>
-            <div class="Nosotros">
-                <img src="../img/b53c0044-9a7a-4740-967b-053e797e29b6.jfif" alt="local">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam molestiae delectus excepturi, possimus reiciendis cum quod veritatis quibusdam obcaecati iure dolor inventore exercitationem fugiat repellat illo reprehenderit fuga iste voluptates.</p>
+            <div>
+                <div class="conteiner__surcusal">
+                    <div>
+                        <h1 class="title__destacados">Surcusal</h1>
+                    </div>
+                    <div class="Mapa">
+                        <p>Direccion: Virrey Cevallos 883, Ministro Rivadavia, Provincia de Buenos Aires</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.218668848237!2d-58.371649584763716!3d-34.850732480396225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32b2afc925693%3A0x4c377c6ddb3e11c8!2sVirrey%20Cevallos%20883%2C%20B1848AHQ%20Ministro%20Rivadavia%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1637769229918!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="local">
+                    <div>
+                        <img src="../img/11.jfif" alt="estantes">
+                    </div>
+                    <div>
+                        <img src="../img/22.jfif" alt="estantes">
+                    </div>
+                </div>
             </div>
         </div>
-        <div>
-            <div class="conteiner__surcusal">
-                <div class="Teclados">
-                    <h1>Surcusal</h1>
-                </div>
-                <div class="Mapa">
-                    <p>Direccion: Virrey Cevallos 883, Ministro Rivadavia, Provincia de Buenos Aires</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.218668848237!2d-58.371649584763716!3d-34.850732480396225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32b2afc925693%3A0x4c377c6ddb3e11c8!2sVirrey%20Cevallos%20883%2C%20B1848AHQ%20Ministro%20Rivadavia%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1637769229918!5m2!1ses-419!2sar" width="1470" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-            <div class="local">
-                <div>
-                    <img src="../img/11.jfif" alt="estantes">
-                </div>
-                <div>
-                    <img src="../img/22.jfif" alt="estantes">
-                </div>
-            </div>
-        </div>
+    </div>
     </main>
 
     <footer id="footer">
