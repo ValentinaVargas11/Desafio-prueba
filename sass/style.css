@@ -507,7 +507,7 @@
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: navbar;
-  background-color: red;
+  /*         background-color: red;*/
 }
 
 #carouselExampleIndicators {
@@ -516,7 +516,7 @@
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: portada;
-  background-color: fuchsia;
+  /*         background-color: fuchsia;*/
 }
 
 #pagos {
@@ -525,7 +525,7 @@
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: metodos;
-  background-color: blue;
+  /*         background-color: blue;*/
 }
 
 #servicio {
@@ -534,7 +534,7 @@
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: servicio;
-  background-color: brown;
+  /*         background-color: brown;*/
 }
 
 .main {
@@ -543,7 +543,7 @@
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: main;
-  background-color: yellow;
+  /*         background-color: yellow;*/
 }
 
 #footer {
@@ -552,8 +552,8 @@
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: footer;
-  background-color: green;
-  border: solid red 2px;
+  /* background-color: green ;
+        border: solid red 2px; */
 }
 
 .grid__conteiner {
@@ -562,7 +562,12 @@
   gap: 10px;
   /* grid-template-columns: auto;
         grid-template-rows: 100px; */
-      grid-template-areas: "navbar" "portada" "metodos" "servicio" "main" "footer";
+      grid-template-areas: "navbar"
+ "portada"
+ "metodos"
+ "servicio"
+ "main"
+ "footer";
 }
 
 /* INDEX */
@@ -595,7 +600,12 @@
   display: -ms-grid;
   display: grid;
   gap: 10px;
-      grid-template-areas: "navbar" "portada" "referencia" "ordenar" "productos" "footer";
+      grid-template-areas: "navbar"
+ "portada"
+ "referencia"
+ "ordenar"
+ "productos"
+ "footer";
 }
 
 /* PRODUCTOS */
@@ -629,7 +639,12 @@
   display: -ms-grid;
   display: grid;
   gap: 10px;
-      grid-template-areas: "navbar" "portada" "nosotros" "surcusal" "img" "footer";
+      grid-template-areas: "navbar"
+ "portada"
+ "nosotros"
+ "surcusal"
+ "img"
+ "footer";
 }
 
 /* NOSOTROS */
@@ -654,7 +669,11 @@
   display: -ms-grid;
   display: grid;
   gap: 10px;
-      grid-template-areas: "navbar" "portada" "contactanos" "formulario" "footer";
+      grid-template-areas: "navbar"
+ "portada"
+ "contactanos"
+ "formulario"
+ "footer";
 }
 
 /* CONTACTOS */
@@ -679,7 +698,11 @@
   display: -ms-grid;
   display: grid;
   gap: 10px;
-      grid-template-areas: "navbar" "portada" "carrito" "comprar" "footer";
+      grid-template-areas: "navbar"
+ "portada"
+ "carrito"
+ "comprar"
+ "footer";
 }
 
 /* CARRITO */

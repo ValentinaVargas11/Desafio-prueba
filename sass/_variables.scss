@@ -1,2 +1,9 @@
-$estilo-borde: solid #c9c5c5 2px;
-$color-primario: white;
+$estilo-borde: solid 2px map-get($mis-colores, hover-c9);
+
+$mis-colores: (
+    principal: red,
+    secundario: white,
+    terciario: black,
+    hover-rgb: rgb(235, 65, 65),
+    hover-c9: #c9c5c5,
+)

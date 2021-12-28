@@ -28,7 +28,7 @@
 }
 
 .metodos{
-    background-image: linear-gradient(black, red);
+    background-image: linear-gradient(map-get($mis-colores, terciario), map-get($mis-colores, principal));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,7 @@
         display: flex;
         padding: 20px 50px;
         .material-icons-outlined{
-            color: $color-primario;
+            color: map-get($mis-colores, secundario);
             padding: 10px;
         }
     }
@@ -48,7 +48,7 @@
         font-size: 20px;
     }
     &__text{
-        color: $color-primario;
+        color: map-get($mis-colores, secundario);
         font-size: 16px;
     }
 }
@@ -69,7 +69,7 @@
             position: center;
         }
         &--h2{
-            color: $color-primario;
+            color: map-get($mis-colores, secundario);
             font: {
                 size: 25px;
                 weight: bold;
@@ -86,9 +86,9 @@
     margin: 20px 0px;
     &__title{
         border-bottom: $estilo-borde;
-        color: red;
+        color: map-get($mis-colores, principal);
         font: {
-            size: 25px;
+            size: 30px;
             weight: bold;
         }
     }
@@ -101,10 +101,10 @@
         &__conteiner{
             margin: 0px 10px;
             background-color: #fafafa;
-            border: solid $color-primario 1px;
+            border: solid 1px map-get($mis-colores, secundario);
             border-bottom: #3B3737 solid 3px;
             &:hover{
-                border-bottom: red solid 3px;
+                border-bottom:solid 3px map-get($mis-colores, primario);
             }
             &__descripcion{
                 margin: 10px;
@@ -135,14 +135,14 @@
     margin: 15px 0px;
     &__text{
         padding: 16px 30px;    
-        background-color: red;
-        color: $color-primario;
+        background-color: map-get($mis-colores, principal);
+        color:map-get($mis-colores, secundario);
         font-size: 16px;
         display: flex;
         justify-content: center;
         animation: mi-efecto 1s linear 0s infinite;
         &:hover{
-            background-color: rgb(235, 65, 65);
+            background-color: map-get($mis-colores, hover-red);
         }
     }
 }
@@ -162,7 +162,7 @@
     flex-direction: column;
     &__title{
         border-bottom: $estilo-borde;
-        color: black;
+        color: map-get($mis-colores, terciario);
     }
     h2 {
         font: {
@@ -178,7 +178,7 @@
     }
 }
 .footer{
-    background-color: rgba(0, 0, 0, 0.8) ;
+    background-color: 33,37,41;
     flex-direction: column;
     &__logo{
         display: flex;
@@ -193,7 +193,7 @@
         display: flex;
         justify-content: center;
         &--url{
-            color: $color-primario;
+            color: map-get($mis-colores, secundario);
         font-size: 20px;
         padding: 10px;
         }
@@ -204,18 +204,18 @@
         padding-bottom: 30px;
     }
 }
+
+
 .fa{
     &-facebook-square{
         margin: 0px 10px;
-        color: $color-primario;
+        color: map-get($mis-colores, secundario);
     }
     &-instagram{
-        margin: 0px 10px;
-        color: $color-primario;
+        @extend .fa--facebook-squar;
     }
     &-whatsapp{
-        margin: 0px 10px;
-        color: $color-primario;
+        @extend .fa--facebook-squar;
     }   
 }
 /* index */
@@ -223,8 +223,8 @@
 /* CONTACTOS */
 .conteiner{
     &__contactos--title{
-        border-bottom: solid #c9c5c5 2px;
-        color: red;
+        border-bottom: $estilo-borde;
+        color: map-get($mis-colores, primario );
         margin-bottom: 20px;
         font-size: 24px;
     }
@@ -297,7 +297,7 @@
 .carrito{
     display: flex;
     align-items: center;
-    border-bottom: #c9c5c5 solid 2px;
+    border-bottom: $estilo-borde;
     justify-content: space-between;
     &:hover{
         border-bottom: red solid 2px;
@@ -315,9 +315,9 @@
             padding: 20px 0px;
         }
         & a{
-            color: red;
+            color: map-get($mis-colores, principal);
             &:hover{
-                color: #c9c5c5;
+                color: map-get($mis-colores, hover-c9);
             }
         }
     }
@@ -335,7 +335,7 @@
         justify-content: right;
         flex-direction: column;
         align-items: flex-end;
-        border-top: #c9c5c5 solid 2px;
+        border-top: $estilo-borde;
         margin-top: 50px;
     }
     &__total{
@@ -346,7 +346,7 @@
         margin: 10px 0px;
         font-size: 16px;
         & a{
-            color: red;
+            color: map-get($mis-colores, principal);
         }
     }
 }
@@ -356,54 +356,53 @@
     height: 50px;
     font-size: 20px;
     margin: 10px 0px;
-    background-color: red;
+    background-color: map-get($mis-colores, principal);
     border: none;
-    color: $color-primario;
+    color: map-get($mis-colores, secundario);
     &:hover{
-        background-color: rgb(235, 65, 65);
+        background-color: map-get($mis-colores, hover-rgb );
     }
 }
 
 /* CARRITO */
 
 /* GRID */
+@mixin grid {
+    grid-row: auto;
+    grid-column: auto;
+}
+
     /* INDEX */
     .navbar{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: navbar;
-        background-color: red;
-    }
+/*         background-color: red;*/    
+}
     #carouselExampleIndicators{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: portada;
-        background-color: fuchsia;
-    }
+/*         background-color: fuchsia;*/    
+}
     #pagos{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: metodos;
-        background-color: blue;
-    }
+/*         background-color: blue;*/    
+}
     #servicio{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: servicio;
-        background-color: brown;
-    }
+/*         background-color: brown;*/    
+}
     .main{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: main;
-        background-color: yellow;
-    }
+/*         background-color: yellow;*/    
+}
     #footer{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: footer;
-        background-color: green ;
-        border: solid red 2px;
+        /* background-color: green ;
+        border: solid red 2px; */
     }
 
 
@@ -425,18 +424,15 @@
 
     /* PRODUCTOS */
     .referencia{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: referencia;
     }
     .ordenar{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: ordenar;
     }
     .conteiner__productos{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: productos;
     }
     
@@ -455,18 +451,15 @@
 
     /* NOSOTROS */
     .container__nosotros{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: nosotros;
     }
     .conteiner__surcusal{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: surcusal;
     }
     .local{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: img;
     }
     .grid__nosotros{
@@ -485,13 +478,11 @@
 
     /* CONTACTOS */
     .conteiner__contactos{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: contactanos;
     }
     .conteiner{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: formulario;
     }
     .grid__contactanos{
@@ -508,13 +499,11 @@
 
     /* CARRITO */
     .conteiner__carrito{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: carrito;
     }
     .carrito__conteiner{
-        grid-row: auto;
-        grid-column: auto;
+        @include grid;
         grid-area: comprar;
     }
     
@@ -635,6 +624,7 @@
         }
     }
 
+
     .destacado{
         &__title{
             font-size: 50px;
@@ -700,7 +690,7 @@
             height: 186px;
         }
         &__contactos--url {
-            color: white;
+            color: map-get($mis-colores, secundario );
             font-size: 70px;
             padding: 20px;
         }
