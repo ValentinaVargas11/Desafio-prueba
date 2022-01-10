@@ -1,5 +1,5 @@
 
-@import 'variables';
+@import "variables";
 
 *{
     margin: 0%;
@@ -178,7 +178,6 @@
     }
 }
 .footer{
-    background-color: 33,37,41;
     flex-direction: column;
     &__logo{
         display: flex;
@@ -212,10 +211,12 @@
         color: map-get($mis-colores, secundario);
     }
     &-instagram{
-        @extend .fa--facebook-squar;
+        margin: 0px 10px;
+        color: map-get($mis-colores, secundario);
     }
     &-whatsapp{
-        @extend .fa--facebook-squar;
+        margin: 0px 10px;
+        color: map-get($mis-colores, secundario);
     }   
 }
 /* index */
@@ -373,47 +374,37 @@
 }
 
     /* INDEX */
-    .navbar{
+    .header{
         @include grid;
-        grid-area: navbar;
-/*         background-color: red;*/    
+        grid-area: header;
 }
     #carouselExampleIndicators{
         @include grid;
         grid-area: portada;
-/*         background-color: fuchsia;*/    
 }
     #pagos{
         @include grid;
         grid-area: metodos;
-/*         background-color: blue;*/    
 }
     #servicio{
         @include grid;
         grid-area: servicio;
-/*         background-color: brown;*/    
 }
     .main{
         @include grid;
         grid-area: main;
-/*         background-color: yellow;*/    
 }
     #footer{
         @include grid;
         grid-area: footer;
-        /* background-color: green ;
-        border: solid red 2px; */
     }
 
 
     .grid__conteiner{
         display: grid;
         gap: 10px;
-        /* grid-template-columns: auto;
-        grid-template-rows: 100px; */
         grid-template-areas: 
-            /* "header"  */
-            "navbar"
+            "header"
             "portada"
             "metodos"
             "servicio"
@@ -440,7 +431,7 @@
         display: grid;
         gap: 10px;
         grid-template-areas: 
-        "navbar"
+        "header"
         "portada"
         "referencia"
         "ordenar"
@@ -467,7 +458,7 @@
         display: grid;
         gap: 10px;
         grid-template-areas: 
-        "navbar"
+        "header"
         "portada"
         "nosotros"
         "surcusal"
@@ -489,7 +480,7 @@
         display: grid;
         gap: 10px;
         grid-template-areas: 
-        "navbar"
+        "header"
         "portada"
         "contactanos"
         "formulario"
@@ -511,7 +502,7 @@
         display: grid;
         gap: 10px;
         grid-template-areas: 
-        "navbar"
+        "header"
         "portada"
         "carrito"
         "comprar"
@@ -523,22 +514,9 @@
 @media screen and (max-width: 780px) {
     /* INDEX */
     .header__conteiner--img{
-        height: 140px;
+        height: 100px;
         width: auto;
     }
-    /* .header__menu{
-        height: 150px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        
-    } */
-    /* .header__menu--conteiner--items a{
-        font-size: 30px;
-    } */
-    /* .header__conteiner--buscador{
-        display: none;
-    } */
     /* nav bo */
     .estructura__marco {
         width: 100%;
@@ -566,32 +544,6 @@
     }
     /* nav */
 
-    /* .portada__img{
-        margin: none;
-    } */
-    /* .portada__img--url {
-        max-width: 100%;
-        width: 1832px;
-    } */
-    /* .portada__conteiner--title{
-        font-size: 50px;
-    } */
-    /* .portada__conteiner--text{
-        font-size: 45px;
-        padding: 20px 60px;
-    } */
-    /* .portada__conteiner{
-        height: 24rem;
-        padding: 0px 30px;
-    } */
-
-    
-    /* #pagos{
-        margin: 20px 0px;
-    } */
-    /* .estructura{
-        flex-direction: column;
-    } */
     .metodos{
         width: 100%;
         align-items: flex-start;
@@ -660,7 +612,7 @@
         margin-bottom:70px;
         &__text{
             padding: 30px;
-            font-size: 50px;
+            font-size: 40px;
         
         }
     }
@@ -683,15 +635,15 @@
     }
     .footer{
         &__redes {
-            font-size: 60px;
+            font-size: 50px;
         }
         &__logo--tecno {
-            width: 1005px;
-            height: 186px;
+            width: 700px;
+            height: auto;
         }
         &__contactos--url {
             color: map-get($mis-colores, secundario );
-            font-size: 70px;
+            font-size: 50px;
             padding: 20px;
         }
     }
