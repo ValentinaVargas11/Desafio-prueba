@@ -629,8 +629,11 @@
                 margin-bottom: 20px;
             }
         }
-        &__title h2{
-            font-size: 50px;
+        &__title{
+            font-size: 50px; 
+            & h2{
+            font-size: 40px;
+            }
         }
     }
     .footer{
@@ -750,29 +753,29 @@
     /* CARRITO */
 
     .carrito{
-        &__conteiner{
-            margin: 100px 0px 50px 0px;        
-        }
-        &__text{
-            & h3{
-                font-size: 35px;
-        }
-            & p{
-                font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 70px;
+            &__conteiner{
+                margin: 100px 10px 50px 10px;        
             }
-        }
-        &__dinero p{
-            font-size: 30px;
-        }
-        &__producto img{
-            height: 500px;
-        }
-        &__total h2{
-            font-size: 50px;
-        }
-        &__elegir p{
-            font-size: 40px;
-        }
+            &__text{
+                & h3{
+                    font-size: 35px;
+            }
+                & p{
+                    font-size: 30px;
+                }
+            }
+            &__producto img{
+                height: 500px;
+            }
+            &__total h2{
+                font-size: 50px;
+            }
+            &__elegir p{
+                font-size: 40px;
+            }
     }
     #comprar{
         font-size: 40px;
