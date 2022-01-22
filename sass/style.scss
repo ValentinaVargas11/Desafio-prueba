@@ -13,8 +13,9 @@
 /* INDEX */
 
 .header__conteiner--img{
-    height: 70px;
+    height: 50px;
     width: auto;
+    margin: 0px 10px;
 }
 
 .estructura{
@@ -22,11 +23,39 @@
     display: flex;
     justify-content: space-evenly;
     &__marco{
-        max-width: 1215px;
-        margin: 0px 10px;
+        width: 100%;
+        max-width: 1250px;
     }
 }
 
+.carousel__boton{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    &--title{
+        font-size: 24px;
+        color: white;
+    }
+    &__padding{
+        width: 155px;
+        &--text{
+        padding: 1rem 3rem;    
+        background-color: map-get($mis-colores, principal);
+        color:map-get($mis-colores, secundario);
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        /* animation: mi-efecto 1s linear 0s infinite; */
+        &:hover{
+            background-color: map-get($mis-colores, hover-rgb);
+        }
+    }
+    
+    }
+}
+.main{
+    padding: 0px 10px
+}
 .metodos{
     background-image: linear-gradient(map-get($mis-colores, terciario), map-get($mis-colores, principal));
     display: flex;
@@ -103,46 +132,77 @@
             background-color: #fafafa;
             border: solid 1px map-get($mis-colores, secundario);
             border-bottom: #3B3737 solid 3px;
+            width: 25%;
+            & a{
+                color: black;
+                &:hover{
+                    color: black;
+                }
+            }
+            &--img{
+                width: 100%;
+                max-width: 250px;
+            }
+            &--margen{
+                height: 300px;
+                background: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
             &:hover{
-                border-bottom:solid 3px map-get($mis-colores, primario);
+                border-bottom:solid 3px map-get($mis-colores, principal);
+                box-shadow: 2px 2px 5px #999;
             }
             &__descripcion{
                 margin: 10px;
+                height: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                /* &--padding{
+                    height: 30px;
+                } */
                 &--subtitle{
                     font-size: 14px;
                     padding: 5px 5px;
+                    height: 50px;
                 }
                 &--text{
                     font-size: 13px;
                     color: #333333;
                     text-align: left;
                     padding: 5px 5px;
+                    height: 150px;
                 }
                 &--precio{
                     padding: 5px 5px 0px 5px;
                 }
+                &--icon{
+                    padding: 5px;
+                    & span {
+                        color: black;
+                    }
+                    
+                }
             }
-            &--img{
-                width: 100%;
-            }
-            
         }
     }
 }
 .boton{
     display: flex;
     justify-content: center;
-    margin: 15px 0px;
+    margin: 20px 0px;
     &__text{
-        padding: 16px 30px;    
+        padding: 20px 30px;    
         background-color: map-get($mis-colores, principal);
         color:map-get($mis-colores, secundario);
         font-size: 16px;
         display: flex;
         justify-content: center;
-        animation: mi-efecto 1s linear 0s infinite;
+        /* animation: mi-efecto 1s linear 0s infinite; */
         &:hover{
-            background-color: map-get($mis-colores, hover-red);
+            background-color: map-get($mis-colores, hover-rgb);
         }
     }
 }
@@ -175,6 +235,10 @@
         margin: 10px 0px 40px 0px;
         align-items: center;
         justify-content: space-around;
+        gap: 10px;
+        & iframe{
+            max-width: 100%;
+        }
     }
 }
 .footer{
@@ -191,16 +255,26 @@
     &__contactos{
         display: flex;
         justify-content: center;
+        & :hover{
+            color: map-get($mis-colores, hover-c9);
+        }
         &--url{
             color: map-get($mis-colores, secundario);
-        font-size: 20px;
-        padding: 10px;
+            font-size: 20px;
+            padding: 10px;
+            
         }
     }
     &__redes{
         display: flex;
         justify-content: center;
         padding-bottom: 30px;
+        font-size: 30px;
+        flex-direction: row;
+        
+        & :hover{
+            color: map-get($mis-colores, hover-c9);
+        }
     }
 }
 
@@ -222,6 +296,9 @@
 /* index */
 
 /* CONTACTOS */
+.formulario{
+    margin: 0px 10px;
+}
 .conteiner{
     &__contactos--title{
         border-bottom: $estilo-borde;
@@ -244,6 +321,9 @@
 
 /* PRODUCTOS */
 
+.referencia__margen{
+    margin: 0px 10px;
+}
 .img{
     height: 400px;
     overflow: hidden;
@@ -251,12 +331,15 @@
         width: 100%;
     }
 }
-
 .categorias {
     display: flex;
     flex-direction: column;
-    margin: 30px 0px;
+    margin: 30px 10px;
 }
+#dropdownMenuButton1{
+    margin: 0px 10px;
+}
+
 /* PRODUCTOS */
 
 /* NOSOTROS  */
@@ -268,11 +351,24 @@
     }
     &__p{
         margin: 0px 60px;
+        & ul{
+            padding-left: 0px;
+        }
     }
 }
 
 .conteiner__surcusal{
     margin: 10px 0px;
+    &__title{
+        border-bottom: $estilo-borde;
+        color: map-get($mis-colores, terciario);
+        & h2{
+            font: {
+                        weight: bold;
+                        size: 25px;
+                    }
+            }
+    }
 }
 
 .material-icons-outlined {
@@ -281,39 +377,45 @@
         color: green;
     }
 }
-.mapa__p {
+.mapa{
+    display: flex;
+    align-items: center;
+    &__p {
     margin: 10px 0px;
 }
-.local{
-    display: flex;
-    justify-content: space-between;
-    &__img{
-        width: 100%;
-    }
+}
+    
+.location{
+    color: black;
+    
 }
 /* NOSOTROS */
 
 /* CARRITO */
-
+.margen{
+    padding: 0px 10px;
+}
 .carrito{
     display: flex;
     align-items: center;
     border-bottom: $estilo-borde;
     justify-content: space-between;
+    margin: 10px 0px;
+    padding: 20px 0px;
     &:hover{
         border-bottom: red solid 2px;
     }
     &__producto img{
-        width: auto;
-        height: 250px;
+        width: 300px;
+        height: auto;
     }
     &__text{
-        margin: 20px;
+        margin: 0px 20px;
         & h3{
-            padding: 10px 0px;
+            font-size: 20px;
         }
         & p{
-            padding: 20px 0px;
+            padding: 10px 0px;
         }
         & a{
             color: map-get($mis-colores, principal);
@@ -341,61 +443,37 @@
     }
     &__total{
         margin: 10px 0px;
-        font-size: 16pxs;
     }
     &__elegir{
         margin: 10px 0px;
-        font-size: 16px;
+        font-size: 15px;
         & a{
             color: map-get($mis-colores, principal);
         }
     }
-}
-
-#comprar{
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    margin: 10px 0px;
-    background-color: map-get($mis-colores, principal);
-    border: none;
-    color: map-get($mis-colores, secundario);
-    &:hover{
-        background-color: map-get($mis-colores, hover-rgb );
+    &__comprar{
+        font-size: 20px;
+        margin: 0px 0px 30px 0px;
     }
 }
 
 /* CARRITO */
 
-/* GRID */
-@mixin grid {
-    grid-row: auto;
-    grid-column: auto;
-}
 
-    /* INDEX */
+
+/* GRID */
+
+/* INDEX */
     .header{
-        @include grid;
         grid-area: header;
 }
     #carouselExampleIndicators{
-        @include grid;
         grid-area: portada;
 }
-    #pagos{
-        @include grid;
-        grid-area: metodos;
-}
-    #servicio{
-        @include grid;
-        grid-area: servicio;
-}
-    .main{
-        @include grid;
-        grid-area: main;
+    .estructura__marco{
+        grid-area: contenido;
 }
     #footer{
-        @include grid;
         grid-area: footer;
     }
 
@@ -406,24 +484,13 @@
         grid-template-areas: 
             "header"
             "portada"
-            "metodos"
-            "servicio"
-            "main"
+            "contenido"
             "footer";
     }
     /* INDEX */
 
     /* PRODUCTOS */
-    .referencia{
-        @include grid;
-        grid-area: referencia;
-    }
-    .ordenar{
-        @include grid;
-        grid-area: ordenar;
-    }
-    .conteiner__productos{
-        @include grid;
+    .productos{
         grid-area: productos;
     }
     
@@ -432,9 +499,6 @@
         gap: 10px;
         grid-template-areas: 
         "header"
-        "portada"
-        "referencia"
-        "ordenar"
         "productos"
         "footer";
     }
@@ -442,15 +506,12 @@
 
     /* NOSOTROS */
     .container__nosotros{
-        @include grid;
         grid-area: nosotros;
     }
     .conteiner__surcusal{
-        @include grid;
         grid-area: surcusal;
     }
     .local{
-        @include grid;
         grid-area: img;
     }
     .grid__nosotros{
@@ -468,12 +529,7 @@
     /* NOSOTROS */
 
     /* CONTACTOS */
-    .conteiner__contactos{
-        @include grid;
-        grid-area: contactanos;
-    }
-    .conteiner{
-        @include grid;
+    .formulario{
         grid-area: formulario;
     }
     .grid__contactanos{
@@ -481,21 +537,15 @@
         gap: 10px;
         grid-template-areas: 
         "header"
-        "portada"
-        "contactanos"
         "formulario"
         "footer";
     }
     /* CONTACTOS */
 
     /* CARRITO */
-    .conteiner__carrito{
-        @include grid;
-        grid-area: carrito;
-    }
-    .carrito__conteiner{
-        @include grid;
-        grid-area: comprar;
+    
+    .compra{
+        grid-area: compra;
     }
     
     .grid__carrito{
@@ -503,51 +553,45 @@
         gap: 10px;
         grid-template-areas: 
         "header"
-        "portada"
-        "carrito"
-        "comprar"
+        "compra"
         "footer";
     }
     /* CARRITO */
+
+
 /* GRID */
 
 @media screen and (max-width: 780px) {
     /* INDEX */
-    .header__conteiner--img{
-        height: 100px;
-        width: auto;
-    }
-    /* nav bo */
     .estructura__marco {
         width: 100%;
     }
-
-    #menu{
-        font-size: 40px;
+    .margen{
+        padding: 0px;
     }
-    .nav{
-        &-link active{
-            font-size: 30px;
+    .header__conteiner--img{
+        height: 40px;
+        width: auto;
+    }
+    .carousel__boton{
+        top: 30%;
+        &--title{
+            font-size: 16px;
+            margin: 5px 0px;
         }
-        &-item dropdown {
-            font-size: 30px;
+        &__padding {
+            width: 100px;
+            &--text{
+                padding: 10px;
+                font-size: 14px;
+            }
         }
-        &-item{
-            font-size: 30px;
-        }
+        
     }
-    .dropdown-item{
-        font-size: 30px;
-    }
-    #buscar{
-        font-size: 30px;
-    }
-    /* nav */
-
     .metodos{
         width: 100%;
         align-items: flex-start;
-        padding: 20px 40px;
+        padding: 10px;
         &__pagos{
             padding: 10px 0px;
             &--tarjeta{
@@ -558,20 +602,20 @@
             }
         }
         &__title{
-            font-size: 30px;
+            font-size: 14px;
         }
         &__text{
-            font-size: 25px;
+            font-size: 11px;
         }
     }
     .servicio{
-        margin: 20px 0px;
+        margin: 10px 0px;
         &__conteiner{
             width: 100%;
             margin: 0px;
             &--h2{
-                font-size: 40px;
-                margin-left: 40px;
+                font-size: 20px;
+                margin-left: 25px;
             }
         }
     }
@@ -579,29 +623,29 @@
 
     .destacado{
         &__title{
-            font-size: 50px;
-            margin: 10px 0px;
+            font-size: 20px;
+            margin: 10px;
         }
         &__productos{
             display: grid;
             flex-direction: column;
             grid-template-columns: 50% 50%;
-            padding: 10px 0px;
-            gap: 20px;
+            gap: 10px;
             margin: 10px;
             &__conteiner{
+                margin: 0px 5px;
+                width: 100%;
                 &__descripcion{
+                    height: 200px;
                     &--subtitle{
-                        font-size: 35px;
-                        padding: 10px 10px;
+                        font-size: 15px;
                     }
                     &--text{
-                        font-size: 35px;
-                        padding: 10px 10px;
+                        font-size: 15px;
+                        display: none;
                     }
                     &--precio{
-                        font-size: 40px;
-                        padding: 10px 10px;
+                        font-size: 15px;
                     }
                 }
             }
@@ -612,7 +656,7 @@
         margin-bottom:70px;
         &__text{
             padding: 30px;
-            font-size: 40px;
+            font-size: 15px;
         
         }
     }
@@ -621,63 +665,63 @@
         margin: 50px 10px 20px 10px;
     }
     .videos { 
-        margin: 0px 10px;
         &__url{
             flex-direction: column;
+            margin: 10px 0px 0px 0px;
+            & div{
+                width: 100%;
+            }
+            & iframe{
+                max-width: none;
+                height: 300px;
+            }
             &--espacio{
                 width: 100%;
+                height: auto;
                 margin-bottom: 20px;
             }
         }
         &__title{
-            font-size: 50px; 
             & h2{
-            font-size: 40px;
+            font-size: 20px;
             }
         }
     }
     .footer{
         &__redes {
-            font-size: 50px;
+            font-size: 30px;
         }
         &__logo--tecno {
-            width: 700px;
+            width: 200px;
             height: auto;
         }
         &__contactos--url {
             color: map-get($mis-colores, secundario );
-            font-size: 50px;
-            padding: 20px;
+            font-size: 20px;
         }
     }
     
     .fa-2x {
-        margin: 10px 100px;
+        margin: 10px 10px;
     }
     /* INDEX */
     
     /* PRODUCTOS */
+    .referencia__margen{
+        margin: 0px;
+    }
+    
     #main{
         margin: 0px;
     }
     .img{
-        height: 500px; 
+        height: auto; 
         margin: 0px;
-    }
-    #dropdownMenuButton1{
-        font-size: 30px; 
+        max-height: 400px;
     }
     /* PRODUCTOS */
     
     /* NOSOTROS */
-    .local{
-        flex-direction: column;
-        margin: 0px;
-        &__img{
-            width: 100%;
-            height: auto;
-        }
-    }
     .nosotros{
         margin: 0px;
         flex-direction: column;
@@ -687,31 +731,39 @@
         }
         &__p{
             margin: 20px;
-            margin-bottom: 60px;
-            font-size: 40px;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+    }
+    .conteiner__surcusal__title{
+        margin: 0px 10px;
+        & h2{
+            font-size: 20px;
         }
     }
     .mapa{
-        margin: 0px;
+        margin: 10px;
         &__p{
-            margin: 20px;
-            font-size: 40px; 
+            margin: 10px;
+            font-size: 15px; 
         }
         & iframe{
-            height: 700px;
             margin: 20px 0px;
         }
     }
     /* NOSOTROS */
 
     /* CONTACTOS */
+    .formulario{
+        margin: 0px;
+    }
     .conteiner{
-        margin: 20px;
+        margin: 10px;
         &__contactos{
-            margin: 20px;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             &--text{
-                font-size: 30px;
+                font-size: 15px;
+                margin: 0px 10px;
             }    
         }
         &__form{
@@ -722,29 +774,25 @@
         }
     }
     .form-label{
-        font-size: 30px;
+        font-size: 15px;
     }
 	#exampleFormControlInput1{
-        font-size: 30px;
+        font-size: 15px;
     }
     .mb-3 form-select {
         font-size: 25px;
     }
     .form-check-label {
-        font-size: 30px;
+        font-size: 15px;
     }
 
-    .form-check-input[type=checkbox] {
-        font-size: 30px;
-    }
     #Motivo {
-        font-size: 30px;
+        font-size: 15px;
         height: 100%;
         margin: 20px 0px;
         width: 100%;
     }
     #enviar{
-        font-size: 30px;
         margin: 20px 0px;
     }
     
@@ -756,34 +804,47 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 70px;
+        margin: 10px;
             &__conteiner{
                 margin: 100px 10px 50px 10px;        
             }
             &__text{
+                margin: 10px;
                 & h3{
-                    font-size: 35px;
+                    font-size: 15px;
+                    
             }
                 & p{
-                    font-size: 30px;
+                    font-size: 15px;
+                    padding: 10px 0px;
                 }
             }
             &__producto img{
-                height: 500px;
+                height: auto;
+                width: 100%;
+                max-width: 400px;
             }
             &__total h2{
-                font-size: 50px;
+                font-size: 20px;
             }
             &__elegir p{
-                font-size: 40px;
+                font-size: 15px;
+            }
+            &__comprar{
+                margin: 10px 0px;
+                font-size: 20px;
             }
     }
-    #comprar{
-        font-size: 40px;
-            margin: 20px 0px;
-            width: 300px;
-            height: 100px;
-    }
+    
     /* CARRITO */
+}
+
+@media screen and (max-width: 425px) {
+    /* INDEX */
+    .carousel__boton {
+        top: 20%;
+    }    
+    /* INDEX */
 }
 
 *{
